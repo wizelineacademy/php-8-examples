@@ -1,0 +1,37 @@
+#!/usr/bin/env php
+<?php
+/**
+ * PHP 8 demo file runner.
+ *
+ * Example of usage:
+ *
+ *     bin/run examples/file.php
+ *
+ * The above will run the examples/file.php code via the PHP 8 container.
+ */
+
+global $argc;
+global $argv;
+
+// Ensure Docker is available.
+$docker = shell_exec('which docker');
+
+if (empty($docker)) {
+    print "Docker does not seem to be available. Please install it and try again.\n";
+    exit(1);
+}
+
+// We must know which file to run.
+if ($argc < 2) {
+    print "Please specify the source file to be executed.\n";
+    exit(1);
+}
+
+// File paths.
+$phpSrc = $argv[$argc - 1];
+$repoPath = dirname(__DIR__);
+
+// Use the PHP 8.0.0beta3 image. Remove the container after execution completes.
+passthru("docker run -it --rm --name php-8-lab -v {$repoPath}:/app/code -w /app/code php:7-cli php /app/code/{$phpSrc}");
+print "\n";
+
