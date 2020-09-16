@@ -15,6 +15,8 @@ You can alternatively specify `bin/php7` though, of course, many examples that r
 
 _Note that the first time you run `bin/php7` or `bin/php8` there may be some "noise" while Docker pulls down the latest image layers, etc. On subsequent runs this generally will not happen._
 
+If you attended the corresponding Wizeline Academy presentation _("Exciting Changes in PHP 8.0"_ on September 17, 2020) you may also be interested in the code snippets contained in the `examples/presentation` directory. These match the code used during the live webinar, however they are far less detailed than those in the main `examples` directory and may make less sense by themselves.
+
 ### Useful Online Resources
 
 You may find the following links useful when researching changes in PHP 8 (these are all third party resources, and are not controlled by us):
