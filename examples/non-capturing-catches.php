@@ -11,8 +11,8 @@ require __DIR__ . '/lib/utilities.php';
 heading('Non-Capturing Catches');
 print 'This code is executing under PHP ' .PHP_VERSION . "\n";
 
-// This first example demonstrates all of the places where attributes
-// can be added.
+// Let's start by looking at a conventional piece of code using a 
+// try/catch structure.
 heading('Example #1: A Traditional Capturing Catch');
 
 try {

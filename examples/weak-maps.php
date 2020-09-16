@@ -42,7 +42,8 @@ $game[$spaceInvader2]['color'] = 'purple';
 heading('Weak Map should contain 3 objects');
 var_dump($game);
 
-// Now let's destroy two of the space invaders.
+// Now let's destroy two of the space invaders. Important to
+// note: we are not directly modifying the $game map.
 unset($spaceInvader1, $spaceInvader3);
 
 // Let's confirm that the map dropped references to space invaders
