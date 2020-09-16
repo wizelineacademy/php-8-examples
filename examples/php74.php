@@ -9,7 +9,7 @@
  * PHP 7.4 introduced more changes than are itemized here, but this is
  * a good starting point!
  * 
- * To run: `bin/php7 examples/sphp74.php`
+ * To run: `bin/php7 examples/php74.php`
  */
 
 require __DIR__ . '/lib/utilities.php';
